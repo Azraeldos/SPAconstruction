@@ -1,37 +1,27 @@
-import { useState } from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { useState, type ReactNode } from 'react'
 import { site } from '@/lib/site'
 
 const navItems = [
-  { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { href: '#home', label: 'Home' },
+  { href: '#services', label: 'Services' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
 ] as const
 
-function navLinkClass({ isActive }: { isActive: boolean }) {
-  return [
-    'rounded-md px-3 py-2 text-sm font-medium transition-colors',
-    isActive
-      ? 'bg-orange-100 text-orange-800'
-      : 'text-stone-700 hover:bg-stone-100 hover:text-stone-900',
-  ].join(' ')
-}
-
-export function Layout() {
+export function Layout({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <div className="flex min-h-svh flex-col">
       <header className="border-b border-stone-200 bg-white shadow-sm">
         <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-          <Link
-            to="/"
+          <a
+            href="#home"
             className="text-lg font-bold text-stone-900 sm:text-xl"
             onClick={() => setMenuOpen(false)}
           >
             {site.name}
-          </Link>
+          </a>
 
           <button
             type="button"
@@ -70,24 +60,21 @@ export function Layout() {
               menuOpen ? 'flex' : 'hidden'
             } absolute left-0 right-0 top-[4.25rem] z-10 flex-col gap-1 border-b border-stone-200 bg-white px-4 py-4 shadow-md md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
           >
-            {navItems.map(({ to, label }) => (
-              <NavLink
-                key={to}
-                to={to}
-                end={to === '/'}
-                className={navLinkClass}
+            {navItems.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className="rounded-md px-3 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-100 hover:text-stone-900"
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
-              </NavLink>
+              </a>
             ))}
           </nav>
         </div>
       </header>
 
-      <main className="flex-1">
-        <Outlet />
-      </main>
+      <main className="flex-1">{children}</main>
 
       <footer className="border-t border-stone-200 bg-stone-900 text-stone-300">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">

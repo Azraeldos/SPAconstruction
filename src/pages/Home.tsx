@@ -23,7 +23,10 @@ const values = [
 export function Home() {
   return (
     <>
-      <section className="bg-stone-900 px-4 py-20 text-white sm:px-6 lg:px-8">
+      <section
+        id="home"
+        className="scroll-mt-20 bg-stone-900 px-4 py-20 text-white sm:px-6 lg:px-8"
+      >
         <div className="mx-auto max-w-6xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-orange-400">
             {site.name}
@@ -36,8 +39,8 @@ export function Home() {
             Free estimates for projects in our service area.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink to="/contact">Get a free estimate</ButtonLink>
-            <ButtonLink to="/services" variant="secondary">
+            <ButtonLink href="#contact">Get a free estimate</ButtonLink>
+            <ButtonLink href="#services" variant="secondary">
               View services
             </ButtonLink>
           </div>
@@ -72,7 +75,7 @@ export function Home() {
             business day.
           </p>
           <div className="mt-8">
-            <ButtonLink to="/contact">Contact us</ButtonLink>
+            <ButtonLink href="#contact">Contact us</ButtonLink>
           </div>
         </div>
       </section>

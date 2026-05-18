@@ -13,7 +13,10 @@ export function Contact() {
   }
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="scroll-mt-20 mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
+    >
       <SectionHeading
         title="Contact us"
         subtitle="Request a free estimate or ask a question—we will get back to you soon."

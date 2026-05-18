@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import type { ComponentProps } from 'react'
 
 type ButtonProps = ComponentProps<'button'> & {
@@ -32,14 +31,14 @@ export function Button({
 }
 
 type ButtonLinkProps = {
-  to: string
+  href: string
   variant?: 'primary' | 'secondary'
   className?: string
   children: React.ReactNode
 }
 
 export function ButtonLink({
-  to,
+  href,
   variant = 'primary',
   className = '',
   children,
@@ -54,8 +53,8 @@ export function ButtonLink({
   }
 
   return (
-    <Link to={to} className={`${base} ${variants[variant]} ${className}`}>
+    <a href={href} className={`${base} ${variants[variant]} ${className}`}>
       {children}
-    </Link>
+    </a>
   )
 }

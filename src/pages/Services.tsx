@@ -20,7 +20,10 @@ const services = [
 
 export function Services() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <section
+      id="services"
+      className="scroll-mt-20 mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
+    >
       <SectionHeading
         title="Our services"
         subtitle="From small repairs to full renovations—we scope each job clearly before we break ground."

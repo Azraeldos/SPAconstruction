@@ -3,7 +3,10 @@ import { site } from '@/lib/site'
 
 export function About() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <section
+      id="about"
+      className="scroll-mt-20 mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
+    >
       <SectionHeading
         title="About us"
         subtitle={`Family-owned builders serving the community for ${site.yearsInBusiness}+ years.`}
