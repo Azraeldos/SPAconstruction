@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react'
+import type { ComponentProps, ReactNode } from 'react'
 
 type ButtonProps = ComponentProps<'button'> & {
   variant?: 'primary' | 'secondary'
@@ -34,7 +34,7 @@ type ButtonLinkProps = {
   href: string
   variant?: 'primary' | 'secondary'
   className?: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export function ButtonLink({
