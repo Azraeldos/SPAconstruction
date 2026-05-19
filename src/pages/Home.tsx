@@ -1,7 +1,7 @@
 import { ButtonLink } from '@/components/ui/Button'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { site } from '@/lib/site'
-
+import heroLogo from '@/assets/heroLogo.png'
 const values = [
   {
     title: 'Built to last',
@@ -27,22 +27,28 @@ export function Home() {
         id="home"
         className="scroll-mt-20 bg-stone-900 px-4 py-20 text-white sm:px-6 lg:px-8"
       >
-        <div className="mx-auto max-w-6xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-orange-400">
-            {site.name}
-          </p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-            {site.tagline}
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-stone-300">
-            Residential remodels, commercial build-outs, and dependable repairs.
-            Free estimates for projects in our service area.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <ButtonLink href="#contact">Get a free estimate</ButtonLink>
-            <ButtonLink href="#services" variant="secondary">
-              View services
-            </ButtonLink>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+              {site.tagline}
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-stone-300">
+              Residential remodels, commercial build-outs, and dependable repairs.
+              Free estimates for projects in our service area.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <ButtonLink href="#contact">Get a free estimate</ButtonLink>
+              <ButtonLink href="#services" variant="secondary">
+                View services
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="flex justify-center lg:justify-end">
+            <img
+              src={heroLogo}
+              alt={site.name}
+              className="w-full max-w-sm object-contain sm:max-w-md lg:max-w-lg"
+            />
           </div>
         </div>
       </section>

@@ -13,7 +13,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex min-h-svh flex-col">
-      <header className="border-b border-stone-200 bg-white shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white shadow-sm">
         <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <a
             href="#home"
