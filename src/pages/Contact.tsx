@@ -19,7 +19,7 @@ export function Contact() {
     >
       <SectionHeading
         title="Contact us"
-        subtitle="Request a free estimate or ask a question—we will get back to you soon."
+        subtitle="Request a free estimate or ask a question we will get back to you soon."
         align="left"
       />
 

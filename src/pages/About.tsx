@@ -22,7 +22,7 @@ export function About() {
           We work closely with homeowners, property managers, and local
           businesses. Whether you are updating a single room or opening a new
           location, you will work directly with the people managing your
-          project—not a call center.
+          project not a call center.
         </p>
         <p className="mt-6 leading-relaxed text-stone-700">
           Licensed, insured, and happy to provide references from recent

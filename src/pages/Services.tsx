@@ -26,7 +26,7 @@ export function Services() {
     >
       <SectionHeading
         title="Our services"
-        subtitle="From small repairs to full renovations—we scope each job clearly before we break ground."
+        subtitle="From small repairs to full renovations we scope each job clearly before we break ground. Servicing all of Southern California."
       />
       <ul className="grid gap-6 md:grid-cols-3">
         {services.map(({ title, description }) => (

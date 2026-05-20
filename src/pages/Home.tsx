@@ -16,7 +16,7 @@ const values = [
   {
     title: 'Local & responsive',
     description:
-      'A small team that knows the area—clear communication from estimate through final walkthrough.',
+      'A small team that knows the area clear communication from estimate through final walkthrough.',
   },
 ] as const
 
@@ -77,8 +77,7 @@ export function Home() {
             Ready to start your project?
           </h2>
           <p className="mt-3 text-stone-600">
-            Tell us about your timeline and budget—we will follow up within one
-            business day.
+            Tell us about your timeline and budget.
           </p>
           <div className="mt-8">
             <ButtonLink href="#contact">Contact us</ButtonLink>
