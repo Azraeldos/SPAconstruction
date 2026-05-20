@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from 'react'
+import { type SubmitEvent, useState } from 'react'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Button } from '@/components/ui/Button'
 import { site } from '@/lib/site'
@@ -6,7 +6,7 @@ import { site } from '@/lib/site'
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault()
     // Wire up Formspree, Netlify Forms, or EmailJS when you have a backend.
     setSubmitted(true)
